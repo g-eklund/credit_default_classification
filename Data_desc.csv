@@ -1,0 +1,75 @@
+Column name,Description,Type,Keep,Reason
+id,the Loan ID,Number,Yes,ID values dont contribute
+member_id,Memmer (customer) ID,,No,ID values dont contribute
+loan_amnt,the amount of the requested loan,Numeric,Yes,
+funded_amnt,Actual funded amount (don't use),,No,Information leak
+funded_amnt_inv,Investors amount (don't use),,No,Information leak
+term,Longitivety of the loan,Categorical,Yes,
+int_rate,interest rate,,No,Information leak
+installment,Montly payment,,No,Information leak
+grade,the rating of the the loan,,No,Information leak
+sub_grade,detailed rating of the loan,,No,Information leak
+emp_title,Employment title,Text,Yes,
+emp_length,How long the borrower has been employed,Categorical,Yes,
+home_ownership,If the borrower owns or rent the home,Categorical,Yes,
+annual_inc,Annual income,Numeric,Yes,
+verification_status,Verified customer or not,Categorical,Yes,
+issue_d,date of issuing the loan,,No,Time invariant
+loan_status,The status of the loan (will be used to create the label),Categorical,Yes,
+pymnt_plan,"payment plan (bad quality, dont use)",,No,bad quality
+url,Loan url (dont use),,No,no info
+desc,Loan description,Text,Yes,
+purpose,"loan purpose, categorical",Categorical,Yes,
+title,Loan title(Text),Text,Yes,
+zip_code,Borrower zip code,Numeric,No,Geospatial
+addr_state,Borrower state,Categorical,Yes,
+dti,Ratio describing loan amount vs income,Numeric,Yes,
+delinq_2yrs,Missed payments last 2 years,,No,Information leak (r)
+earliest_cr_line,Date when first credit was done,,No,Information leak
+inq_last_6mths,Number of loans last 6 months,,No,Information leak
+mths_since_last_delinq,Months since last missed payment,,No,Information leak
+mths_since_last_record,time since last loan,,No,Information leak
+open_acc,Number of open loans,,No,Information leak
+pub_rec,Bad behavior count,Numeric,Yes,
+revol_bal,Total credit revolve balance (risk information leak),,No,Information leak
+revol_util,Revolve utilization (risk information leak),,No,Information leak
+total_acc,Number of loans issued by the borrower,Numeric,Yes,
+initial_list_status,Initial listing (remove),,No,Information leak
+out_prncp,No idea,,No,
+out_prncp_inv,no idea,,No,
+total_pymnt,Dont use,,No,Information leak
+total_pymnt_inv,Dont use,,No,Information leak
+total_rec_prncp,Dont use,,No,Information leak
+total_rec_int,Dont use,,No,Information leak
+total_rec_late_fee,Dont use,,No,Information leak
+recoveries,Dont use,,No,Information leak
+collection_recovery_fee,Dont use,,No,Information leak
+last_pymnt_d,Last payment date (remove),,No,Information leak
+last_pymnt_amnt, Amount of last payment,,No,Information leak
+next_pymnt_d,next payment date,,No,Information leak
+last_credit_pull_d,Next date ,,No,Information leak
+collections_12_mths_ex_med,Remove,,No,Information leak
+mths_since_last_major_derog,Time since last bad rating,,No,Information leak
+policy_code,SOme policy,,No,Information leak
+application_type,Only include individual,Categorical,Yes,Use for filtering
+annual_inc_joint,remove,,No,
+dti_joint,remove,,No,
+verification_status_joint,remove,,No,
+acc_now_delinq,number of accounts with delinquency,,No,
+tot_coll_amt,remove,,No,
+tot_cur_bal,total balance of across aoccounts,,No,
+open_acc_6m,Number of open accounts last 6 months,,No,
+open_il_6m,Dont use,,No,
+open_il_12m,Dont use,,No,
+open_il_24m,Dont use,,No,
+mths_since_rcnt_il,Dont use,,No,
+total_bal_il,Dont use,,No,
+il_util,Dont use,,No,
+open_rv_12m,Dont use,,No,
+open_rv_24m,Dont use,,No,
+max_bal_bc,Dont use,,No,
+all_util,Dont use,,No,
+total_rev_hi_lim,Dont use,,No,
+inq_fi,Number of personal inquiries,,No,
+total_cu_tl,Number of finance trades,,No,
+inq_last_12m,Inquiries last 12 months,,No,
